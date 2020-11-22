@@ -5,7 +5,7 @@ const fs = require("fs");
 const inquirer = require("inquirer");
 
 //call generateMarkdown.js
-const generateMarkdown = require("./generateMarkdown.js");
+const generateMarkdown = require("./utils/generateMarkdown.js");
 
 //Project Title, sections: Description, Table of Contents, Installation, Usage, License, Contributing, Tests, and Questions
 //Need also Github username, email address
