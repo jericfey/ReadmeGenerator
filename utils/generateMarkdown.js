@@ -9,10 +9,15 @@ function generateMarkdown(answers) {
   ## Table of Contents
 
   *[Installation](#installation)
+
   *[Usage](#usage)
+
   *[License](#license)
+
   *[Contributing](#contributing)
+
   *[Tests](#tests)
+
   *[Questions](#questions)
 
   ## Installation
@@ -23,15 +28,19 @@ function generateMarkdown(answers) {
   *Instructions and examples of how to use:*
 
   ![Gif demo of README-generator](readme-demo.gif)
+  ${answers.usage}
 
   ## License
+  ${answers.license}
 
   ## Contributing
-
+  ${answers.contributing}
   ## Tests
+  ${answers.tests}
 
   ## Questions
   For any questions: mailto:${answers.email}
+
   GitHub profile: https://github.com/${answers.username}
 
 
