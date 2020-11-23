@@ -28,8 +28,11 @@ function generateMarkdown(answers) {
 
   ## Usage
   *Instructions and examples of how to use:*
+  
   >${answers.usageCommand}
-  ![Gif demo of README-generator](readme-demo.gif)
+
+  ![Gif demo of README Generator](./utils/ReadmeGenerator.gif)
+
   ${answers.usage}
 
   ## License
