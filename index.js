@@ -84,6 +84,11 @@ const questions = () => {
       name: "usage",
     },
     {
+      type: "input",
+      message: "Provide command to run application.",
+      name: "usageCommand",
+    },
+    {
       type: "list",
       message: "Choose a license for your project.",
       name: "license",
@@ -109,16 +114,6 @@ const questions = () => {
   ]);
 };
 
-// const badge = (answer) => {
-//   if (questions.name.license === "GNU GPLv3") {
-//     return;
-//   } else if (questions.name.license === "Apache License 2.0") {
-//     console.log("This kinda worked", answer.license);
-//   } else {
-//     console.log("This didn't work", answer.license);
-//   }
-// };
-
 // function to initialize program
 const init = async () => {
   try {
@@ -127,35 +122,30 @@ const init = async () => {
 
     if (answers.license === "MIT License") {
       answers.badge =
-        "![MIT license](https://img.shields.io/github/license/jericfey/ReadmeGenerator?logo=MIT&style=plastic)";
+        "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)";
       answers.licenseInfo =
         "The MIT License grants permission, free of charge, to any person obtaining a copy of this software and associated documentation files, to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so.";
     } else if (answers.license === "Apache License 2.0") {
-      answers.badge = "https://img.shields.io/npm/l/inquirer?style=plastic";
+      answers.badge =
+        "[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)";
       answers.licenseInfo =
-        "The Apache License 2.0 makes sure that the user does not have to worry about infringing any patents by using the software. The user is granted a license to any patent that covers the software. This license is terminated if the user sues anyone over patent infringement related to this software. This condition is added in order to prevent patent litigations.";
+        "The 2.0 version of the Apache License, approved by the ASF in 2004, helps us achieve our goal of providing reliable and long-lived software products through collaborative open source software development.";
+    } else if (answers.license === "GNU GPLv3") {
+      answers.badge =
+        "[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)";
+      answers.licenseInfo =
+        "The GNU General Public License is a free, copyleft license for software and other kinds of works.";
     } else {
-      answers.badge = "https://img.shields.io/npm/l/inquirer?style=plastic";
+      answers.badge =
+        "[![License: Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)](http://unlicense.org/)";
       answers.licenseInfo =
-        "Software under the GPL may be run for all purposes, including commercial purposes and even as a tool for creating proprietary software, such as when using GPL-licensed compilers. Users or companies who distribute GPL-licensed works (e.g. software), may charge a fee for copies or give them free of charge. This distinguishes the GPL from shareware software licenses that allow copying for personal use but prohibit commercial distribution, or proprietary licenses where copying is prohibited by copyright law. The FSF argues that freedom-respecting free software should also not restrict commercial use and distribution (including redistribution).";
+        "This is free and unencumbered software released into the public domain. Anyone is free to copy, modify, publish, use, compile, sell, or distribute this software, either in source code form or as a compiled binary, for any purpose, commercial or non-commercial, and by any means.";
     }
 
     const readme = generateMarkdown(answers);
     // console.log("Readme: ", readme);
 
     await writeFileAsync("README.md", readme);
-
-    // fs.appendFile("README.md", badge, (err) => {
-    //   if (err) {
-    //     console.log(err);
-    //   } else {
-    //     // Get the file contents after the append operation
-    //     console.log(
-    //       "\nFile Contents of file after append:",
-    //       fs.readFileSync("README.md", "utf8")
-    //     );
-    //   }
-    // });
 
     console.log("Successfully generated to README.md");
   } catch (err) {
@@ -165,6 +155,3 @@ const init = async () => {
 
 // function call to initialize program
 init();
-
-// GitHub license:
-// ![GitHub](https://img.shields.io/github/license/jericfey/ReadmeGenerator?style=plastic)

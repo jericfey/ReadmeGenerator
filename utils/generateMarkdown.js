@@ -24,11 +24,11 @@ function generateMarkdown(answers) {
 
   ## Installation
   To install necessary dependencies, run the following command:
-  >${answers.installation}
+  ${answers.installation}
 
   ## Usage
   *Instructions and examples of how to use:*
-
+  >${answers.usageCommand}
   ![Gif demo of README-generator](readme-demo.gif)
   ${answers.usage}
 
