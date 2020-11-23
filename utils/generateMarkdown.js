@@ -2,6 +2,8 @@
 function generateMarkdown(answers) {
   return `# ${answers.title} 
 
+  ${answers.badge}
+
   ## Description
 
   ${answers.description}
@@ -32,8 +34,9 @@ function generateMarkdown(answers) {
 
   ## License
   ${answers.license}
+  ${answers.licenseInfo}
 
-  ## Contribution Guidelines
+  ## Contributing
   ${answers.contributing}
   ## Tests
   ${answers.tests}
