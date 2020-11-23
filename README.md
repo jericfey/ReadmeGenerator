@@ -7,10 +7,15 @@
   ## Table of Contents
 
   *[Installation](#installation)
+
   *[Usage](#usage)
+
   *[License](#license)
+
   *[Contributing](#contributing)
+
   *[Tests](#tests)
+
   *[Questions](#questions)
 
   ## Installation
@@ -21,15 +26,19 @@
   *Instructions and examples of how to use:*
 
   ![Gif demo of README-generator](readme-demo.gif)
+  USAGE
 
   ## License
+  MIT License
 
-  ## Contributing
-
+  ## Contribution Guidelines
+  
   ## Tests
+  
 
   ## Questions
-  For any questions: jericfey@gmail.com
+  For any questions: mailto:jericfey@gmail.com
+
   GitHub profile: https://github.com/jericfey
 
 

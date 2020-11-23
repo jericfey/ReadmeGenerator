@@ -80,20 +80,16 @@ const questions = () => {
     {
       type: "input",
       message:
-        "Provide instructions and examples of your project in use for the Usage section.",
+        "Provide instructions and examples of your project in use for the USAGE section.",
       name: "usage",
     },
     {
       type: "list",
       message: "Choose a license for your project.",
       choices: [
-        "GNU AGPLv3",
         "GNU GPLv3",
-        "GNU LGPLv3",
-        "Mozilla Public License 2.0",
         "Apache License 2.0",
         "MIT License",
-        "Boost Software License 1.0",
         "The Unlicense",
       ],
       name: "license",
@@ -114,27 +110,16 @@ const questions = () => {
 };
 
 // function to initialize program
-// function init() {
-//   //Prompt user with questions
-//   const input = inquirer.prompt(questions);
-//   // console.log("User Response: ", input);
 
-//   //send answers to generate markdown file
-//   const markdown = generateMarkdown(input);
-
-//   //write file
-//   const writeFileAsync("README.md", markdown);
-// }
 const init = async () => {
-  console.log("hi");
   try {
     const answers = await questions();
-
+    
     const readme = generateMarkdown(answers);
 
-    await writeFileAsync("./utils/README.md", readme);
+    await writeFileAsync("README.md", readme);
 
-    console.log("Successfully wrote to README.md");
+    console.log("Successfully generated to README.md");
   } catch (err) {
     console.log(err);
   }

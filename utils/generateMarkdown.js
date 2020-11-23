@@ -33,7 +33,7 @@ function generateMarkdown(answers) {
   ## License
   ${answers.license}
 
-  ## Contributing
+  ## Contribution Guidelines
   ${answers.contributing}
   ## Tests
   ${answers.tests}
