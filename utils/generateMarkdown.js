@@ -1,10 +1,10 @@
 // function to generate markdown for README
-function generateMarkdown(data) {
-  return `# ${data.title} 
+function generateMarkdown(answers) {
+  return `# ${answers.title} 
 
   ## Description
 
-  ${data.description}
+  ${answers.description}
 
   ## Table of Contents
 
@@ -17,7 +17,22 @@ function generateMarkdown(data) {
 
   ## Installation
   To install necessary dependencies, run the following command:
-  
+  >${answers.installation}
+
+  ## Usage
+  *Instructions and examples of how to use:*
+
+  ![Gif demo of README-generator](readme-demo.gif)
+
+  ## License
+
+  ## Contributing
+
+  ## Tests
+
+  ## Questions
+  For any questions: mailto:${answers.email}
+  GitHub profile: https://github.com/${answers.username}
 
 
 

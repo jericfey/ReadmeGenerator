@@ -1,17 +1,36 @@
-# ReadmeGenerator
+# Project Title 
 
-Installation:
- - Node.js
+  ## Description
 
-Summary: 
-Use Node.js to generate a Readme file depending on answers to questions prompted to the user
+  Project Description
 
-Usage: 
- - 
+  ## Table of Contents
 
- Additions: 
-  - 
+  *[Installation](#installation)
+  *[Usage](#usage)
+  *[License](#license)
+  *[Contributing](#contributing)
+  *[Tests](#tests)
+  *[Questions](#questions)
+
+  ## Installation
+  To install necessary dependencies, run the following command:
+  >Project Installation
+
+  ## Usage
+  *Instructions and examples of how to use:*
+
+  ![Gif demo of README-generator](readme-demo.gif)
+
+  ## License
+
+  ## Contributing
+
+  ## Tests
+
+  ## Questions
+  For any questions: jericfey@gmail.com
+  GitHub profile: https://github.com/jericfey
 
 
 
-![AboutMe Screenshot](./images/Website_screenshot_AboutMe.jpg)
